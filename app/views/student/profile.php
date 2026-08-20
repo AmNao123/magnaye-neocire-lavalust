@@ -423,7 +423,7 @@
 
         <a
             class="back-button"
-            href="/student"
+            href="<?= html_escape($studentHomeUrl); ?>"
         >
             ← Back to Student Home
         </a>
