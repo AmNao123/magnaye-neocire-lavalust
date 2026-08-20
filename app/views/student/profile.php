@@ -20,12 +20,12 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #f1f5f9;
-            color: #1e293b;
+            color: #a22525;
             min-height: 100vh;
         }
 
         .navbar {
-            background: #172554;
+            background: #a22525;
             padding: 20px 60px;
 
             display: flex;
@@ -81,7 +81,7 @@
 
             border-radius: 50%;
 
-            background: #2563eb;
+            background: #eb2f25;
             color: white;
 
             display: flex;
@@ -111,13 +111,13 @@
             background: #f8fafc;
             padding: 22px;
             border-radius: 12px;
-            border-left: 4px solid #2563eb;
+            border-left: 4px solid #eb2525;
         }
 
         .information-box .label {
             display: block;
             font-weight: bold;
-            color: #2563eb;
+            color: #eb2525;
             margin-bottom: 8px;
         }
 
@@ -132,7 +132,7 @@
 
             padding: 13px 22px;
 
-            background: #172554;
+            background: #eb2525;
             color: white;
 
             text-decoration: none;
@@ -141,7 +141,7 @@
         }
 
         .back-button:hover {
-            background: #1e3a8a;
+            background: #d8231d;
         }
 
         .protected-message {
@@ -178,11 +178,11 @@
             padding: 25px;
             background: #f8fafc;
             border-radius: 12px;
-            border-left: 4px solid #2563eb;
+            border-left: 4px solid #eb6e25;
         }
 
         .profile-description h2 {
-            color: #2563eb;
+            color: #eb2525;
             font-size: 20px;
             margin-bottom: 10px;
         }

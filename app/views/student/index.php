@@ -20,12 +20,12 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #eef2ff;
-            color: #1e293b;
+            color: #a22525;
             min-height: 100vh;
         }
 
         .navbar {
-            background: #172554;
+            background: #a22525;
             padding: 20px 60px;
 
             display: flex;
@@ -91,7 +91,7 @@
         }
 
         .student-card h2 {
-            color: #2563eb;
+            color: #eb2525;
             margin-bottom: 20px;
         }
 
@@ -119,7 +119,7 @@
             display: inline-block;
             margin-top: 30px;
 
-            background: #2563eb;
+            background: #eb2525;
             color: white;
 
             text-decoration: none;
@@ -132,7 +132,7 @@
         }
 
         .profile-button:hover {
-            background: #1d4ed8;
+            background: #d8231d;
         }
 
         .footer {
