@@ -53,6 +53,9 @@ class StudentController extends Controller
 
         $data['title'] = 'Neo Magnaye | Student Profile';
 
+        $data['studentHomeUrl'] ='/student';
+        $data['studentProfileUrl'] ='/student/profile';
+
         $this->call->view('student/profile', $data);
     }
 }    
