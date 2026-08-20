@@ -41,6 +41,9 @@ class StudentController extends Controller
 
         $data['title'] = 'Neo Magnaye | Student Portal';
 
+        $data['studentHomeUrl'] ='/student';
+        $data['studentProfileUrl'] ='/student/profile';
+
         $this->call->view('student/index', $data);
     }
 
