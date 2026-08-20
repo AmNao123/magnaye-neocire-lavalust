@@ -187,11 +187,11 @@
 
     <div class="nav-links">
 
-        <a href="http://localhost/LavaLust-Test/student">
+        <a href="/student">
             Home
         </a>
 
-        <a href="http://localhost/LavaLust-Test/student/profile">
+        <a href="/student/profile">
             Student Profile
         </a>
 
@@ -302,7 +302,7 @@
 
         <a
             class="profile-button"
-            href="/LavaLust-Test/student/profile"
+            href="/student/profile"
         >
             View Student Profile
         </a>
