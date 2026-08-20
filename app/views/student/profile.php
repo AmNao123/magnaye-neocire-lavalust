@@ -5,7 +5,10 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title><?= html_escape($title); ?></title>
 
@@ -20,12 +23,12 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #f1f5f9;
-            color: #a22525;
+            color: #1e293b;
             min-height: 100vh;
         }
 
         .navbar {
-            background: #a22525;
+            background: #172554;
             padding: 20px 60px;
 
             display: flex;
@@ -81,7 +84,7 @@
 
             border-radius: 50%;
 
-            background: #eb2f25;
+            background: #2563eb;
             color: white;
 
             display: flex;
@@ -111,18 +114,19 @@
             background: #f8fafc;
             padding: 22px;
             border-radius: 12px;
-            border-left: 4px solid #eb2525;
+            border-left: 4px solid #2563eb;
         }
 
         .information-box .label {
             display: block;
             font-weight: bold;
-            color: #eb2525;
+            color: #2563eb;
             margin-bottom: 8px;
         }
 
         .information-box .value {
             color: #334155;
+            word-break: break-word;
         }
 
         .back-button {
@@ -132,7 +136,7 @@
 
             padding: 13px 22px;
 
-            background: #eb2525;
+            background: #172554;
             color: white;
 
             text-decoration: none;
@@ -141,7 +145,7 @@
         }
 
         .back-button:hover {
-            background: #d8231d;
+            background: #1e3a8a;
         }
 
         .protected-message {
@@ -155,6 +159,35 @@
 
             color: #166534;
             text-align: center;
+        }
+
+        .profile-description {
+            margin-top: 25px;
+            padding: 25px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .profile-description h2 {
+            color: #2563eb;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .profile-description p {
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .facebook-link {
+            color: #2563eb;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .facebook-link:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 700px) {
@@ -173,29 +206,9 @@
 
         }
 
-        .profile-description {
-            margin-top: 25px;
-            padding: 25px;
-            background: #f8fafc;
-            border-radius: 12px;
-            border-left: 4px solid #eb6e25;
-        }
-
-        .profile-description h2 {
-            color: #eb2525;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .profile-description p {
-            color: #475569;
-            line-height: 1.6;
-        }
-
     </style>
 
 </head>
-
 
 <body>
 
@@ -208,11 +221,11 @@
 
     <div class="nav-links">
 
-        <a href="/student">
+        <a href="<?= html_escape($studentHomeUrl); ?>">
             Home
         </a>
 
-        <a href="/student/profile">
+        <a href="<?= html_escape($studentProfileUrl); ?>">
             Student Profile
         </a>
 
@@ -327,11 +340,11 @@
             <div class="information-box">
 
                 <span class="label">
-                 Address
+                    Address
                 </span>
 
-                 <span class="value">
-                    <?= $student['address']; ?>
+                <span class="value">
+                    <?= html_escape($student['address']); ?>
                 </span>
 
             </div>
@@ -344,7 +357,7 @@
                 </span>
 
                 <span class="value">
-                    <?= $student['contact']; ?>
+                    <?= html_escape($student['contact']); ?>
                 </span>
 
             </div>
@@ -357,7 +370,7 @@
                 </span>
 
                 <span class="value">
-                    <?= $student['skills']; ?>
+                    <?= html_escape($student['skills']); ?>
                 </span>
 
             </div>
@@ -370,7 +383,7 @@
                 </span>
 
                 <span class="value">
-                    <?= $student['hobbies']; ?>
+                    <?= html_escape($student['hobbies']); ?>
                 </span>
 
             </div>
@@ -386,24 +399,29 @@
             </h2>
 
             <p>
-                <?= $student['description']; ?>
+                <?= html_escape($student['description']); ?>
             </p>
 
         </div>
 
 
-            <div class="profile-description">
+        <div class="profile-description">
 
-            <h2>Social Media</h2>
+            <h2>
+                Social Media
+            </h2>
 
             <p>
-                <a href="<?= $student['social_media']['facebook']; ?>" target="_blank">
-                Facebook
+
+                <a
+                    class="facebook-link"
+                    href="<?= html_escape($student['social_media']['facebook']); ?>"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Facebook
                 </a>
-                <br>
-                <a href="<?= $student['social_media']['instagram']; ?>" target="_blank">
-                Instagram
-                </a>
+
             </p>
 
         </div>
@@ -411,19 +429,18 @@
 
         <div class="protected-message">
 
-            ✓ Neo Magnaye's Student Profile Access Verified
+            ✓ Student Profile Access Verified
 
-        <br>
+            <br>
 
-            <small>
-                Authorized through StudentMiddleware.
-            </small>
+            
+
         </div>
 
 
         <a
             class="back-button"
-            href="/student"
+            href="<?= html_escape($studentHomeUrl); ?>"
         >
             ← Back to Student Home
         </a>
@@ -432,7 +449,6 @@
     </div>
 
 </div>
-
 
 </body>
 
