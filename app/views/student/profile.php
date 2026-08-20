@@ -208,11 +208,11 @@
 
     <div class="nav-links">
 
-        <a href="<?= html_escape($studentHomeUrl); ?>">
+        <a href="/student">
             Home
         </a>
-    
-        <a href="<?= html_escape($studentProfileUrl); ?>">
+
+        <a href="/student/profile">
             Student Profile
         </a>
 

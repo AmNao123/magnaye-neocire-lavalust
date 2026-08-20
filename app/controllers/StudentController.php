@@ -18,10 +18,14 @@ class StudentController extends Controller
 
             'address'     => 'Santa. Rita, Pinamalayan, Oriental Mindoro',
             'contact'     => '0916 554 4080',
-            'skills'      => 'Database',
+            'skills'      => 'Programmer, Video Editor, Musician',
             'hobbies'     => 'Gaming, Volleyball, Playing Instruments, Reading',
 
-            'description' => 'A BS Information Technology student interested in web development, programming, and learning new technologies.',
+            'description' => '
+                Neo Cire Magnaye is a highly skilled and motivated individual with a passion for technology and creativity. 
+                With a strong background in programming, video editing, and music, Neo has developed a diverse skill set that allows him to excel in various areas. 
+                He is known for his dedication, attention to detail, and ability to think critically, making him a valuable asset in any team or project. 
+                Neo is constantly seeking new challenges and opportunities to expand his knowledge and expertise, and he is committed to delivering high-quality results in everything he does.',
 
             'social_media' => [
             'facebook' => 'https://www.facebook.com/fugginidiot',
