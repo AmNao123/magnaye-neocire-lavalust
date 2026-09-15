@@ -65,4 +65,6 @@ class StudentController extends Controller
 
         $this->call->view('student/profile', $data);
     }
+
+    
 }    

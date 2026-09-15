@@ -57,10 +57,26 @@
                         <td><?= $user['lastname']; ?></td>
                         <td><?= $user['email']; ?></td>
                         <td><?= $user['username']; ?></td>
+
+                        <td>
+                            <a href="<?= site_url('users/edit/' . $user['id']); ?>"
+                                <button type="button">Update</button>
+                            </a>
+
+                            <a href="<?= site_url('users/delete/' . $user['id']); ?>"
+                                onclick="return confirm('Confirm delete?');">
+                                <button type="button">Delete</button>
+                            </a>
+                        </td>
                         </tr>  
                     <?php endforeach; ?> 
                 </tr>
             </table>
+        </div>
+        <div>
+            <a href="<?= site_url('/users/create'); ?>">
+                <button type="button">Create New User</button>
+            </a>
         </div>
     </body>
 </html>
